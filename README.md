@@ -1,4 +1,7 @@
 Mockup
-![Project mockup](<(https://github.com/alexandre-fiaschi/ai-travel-agent-simple/blob/main/images/project-mokup.png?raw=true)>)
+![Project mockup](images/project-mokup.png)
 
-run: npx parcel index.html
+To run the project with Parcel
+```
+npx parcel index.html
+```
