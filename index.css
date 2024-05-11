@@ -1,0 +1,311 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+.lets-begin-container {
+  background-color: #f2ffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 80px 6px;
+  font-size: 25px;
+  color: #000;
+  font-weight: 700;
+  text-align: center;
+}
+
+.lets-begin-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  margin-top: 13px;
+}
+
+.lets-begin-button {
+  font-family: Inter, sans-serif;
+  font-size: 25px;
+  border-radius: 40px;
+  border: 4px solid rgba(0, 0, 0, 1);
+  background-color: #4bdcb0;
+  margin-top: 47px;
+  width: 100%;
+  max-width: 324px;
+  padding: 18px 60px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.trip-container {
+  background-color: #f2ffff;
+  display: none;
+  max-width: 480px;
+  width: 100%;
+  flex-direction: column;
+  color: #000;
+  margin: 0 auto;
+  padding: 46px 23px 0;
+}
+
+.trip-title {
+  align-self: center;
+  font: 700 48px Inter, sans-serif;
+}
+
+.trip-dates {
+  display: flex;
+  margin-top: 36px;
+  gap: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.trip-start-date,
+.trip-end-date {
+  font-family: Inter, sans-serif;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background-color: #bbf7f7;
+  justify-content: center;
+  padding: 13px 15px;
+}
+
+.trip-end-date {
+  padding: 13px 18px;
+}
+
+.trip-route {
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background-color: #bbf7f7;
+  margin-top: 25px;
+  text-align: center;
+  justify-content: center;
+  padding: 19px 43px;
+  font: 700 25px Inter, sans-serif;
+}
+
+.weather-title,
+.flights-title,
+.hotel-title {
+  text-align: center;
+  align-self: center;
+  margin-top: 46px;
+  font: 700 30px Inter, sans-serif;
+}
+
+.weather-description {
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background-color: #bbf7f7;
+  margin-top: 16px;
+  justify-content: center;
+  padding: 27px 14px;
+  font: 400 16px Inter, sans-serif;
+}
+
+.flights-info,
+.hotel-info {
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background-color: #bbf7f7;
+  display: flex;
+  margin-top: 10px;
+  flex-direction: column;
+  padding: 25px 23px 15px;
+}
+
+.flights-description,
+.hotel-description {
+  font: 400 16px Inter, sans-serif;
+}
+
+.book-button {
+  border-radius: 40px;
+  border: 4px solid rgba(0, 0, 0, 1);
+  background-color: #4bdcb0;
+  margin-top: 16px;
+  align-items: center;
+  white-space: nowrap;
+  text-align: center;
+  justify-content: center;
+  padding: 15px 60px;
+  font: 700 25px Inter, sans-serif;
+}
+
+.hotel-info .book-button {
+  margin-top: 19px;
+  padding: 15px 60px;
+}
+
+.trip-planner {
+  background-color: #f2ffff;
+  display: none;
+  max-width: 480px;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  font-size: 25px;
+  color: #000;
+  font-weight: 700;
+  margin: 0 auto;
+  padding: 33px 0;
+}
+
+.trip-planner-content {
+  align-self: stretch;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  font-size: 22px;
+  padding: 0 31px;
+}
+
+.travellers-label {
+  text-align: center;
+  font-family: Inter, sans-serif;
+}
+
+.travellers-input {
+  border-radius: 40px;
+  border: 4px solid rgba(0, 0, 0, 1);
+  background-color: #f2ffff;
+  align-self: stretch;
+  display: flex;
+  margin-top: 12px;
+  gap: 20px;
+  font-size: 35px;
+  color: #f2ffff;
+  white-space: nowrap;
+  justify-content: space-between;
+  padding: 11px 15px;
+}
+
+.travellers-decrement,
+.travellers-increment {
+  font-family: Inter, sans-serif;
+  stroke-width: 4px;
+  border: 4px solid rgba(0, 0, 0, 1);
+  background-color: #000;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  color: white;
+  font-size: large;
+}
+
+.travellers-decrement {
+  padding: 0 11px;
+}
+
+.travellers-count {
+  color: #000;
+  text-align: center;
+  margin: auto 0;
+  font: 25px Inter, sans-serif;
+}
+
+.flying-from-label,
+.flying-to-label,
+.from-date-label,
+.to-date-label,
+.budget-label {
+  text-align: center;
+  font-family: Inter, sans-serif;
+  margin-top: 54px;
+}
+
+.flying-from-input,
+.flying-to-input,
+.from-date-input,
+.to-date-input {
+  border-radius: 40px;
+  border: 4px solid rgba(0, 0, 0, 1);
+  background-color: #f2ffff;
+  align-self: stretch;
+  margin-top: 7px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 18px 60px;
+  font: 25px Inter, sans-serif;
+}
+
+.flying-to-label,
+.to-date-label {
+  margin-top: 13px;
+}
+
+.flying-to-input,
+.from-date-input,
+.to-date-input {
+  white-space: nowrap;
+  padding: 21px 60px;
+}
+
+.budget-input {
+  font-family: Inter, sans-serif;
+  border-radius: 40px;
+  border: 4px solid rgba(0, 0, 0, 1);
+  background-color: #f2ffff;
+  margin-top: 7px;
+  width: 100%;
+  max-width: 328px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 19px 60px;
+  font-size: 25px;
+}
+
+.euro-symbol {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #000;
+}
+.plan-trip-button {
+  font-family: Inter, sans-serif;
+  border-radius: 40px;
+  border: 4px solid rgba(0, 0, 0, 1);
+  background-color: #4bdcb0;
+  margin-top: 17px;
+  width: 100%;
+  max-width: 450px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 18px 60px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999; /* Ensure it's on top of other elements */
+  display: none; /* Initially hidden */
+}
+
+.loading-gif {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 130px; /* Adjust the width as needed */
+  height: 130px; /* Adjust the height as needed */
+}

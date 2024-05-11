@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <section class="lets-begin-container">
+      <img
+        src="images/ai_travel_agent_1.png"
+        alt="Let's Begin"
+        class="lets-begin-image"
+      />
+      <button class="lets-begin-button">Let's Begin</button>
+    </section>
+    <section class="trip-planner">
+      <section class="trip-planner-content">
+        <h2 class="travellers-label">Number of travellers</h2>
+        <div class="travellers-input">
+          <button
+            class="travellers-decrement"
+            aria-label="Decrement travellers"
+          >
+            -
+          </button>
+          <span class="travellers-count">1</span>
+          <button
+            class="travellers-increment"
+            aria-label="Increment travellers"
+          >
+            +
+          </button>
+        </div>
+        <label for="flying-from" class="flying-from-label">Flying from</label>
+        <input
+          type="text"
+          id="flying-from"
+          class="flying-from-input"
+          placeholder="New York City"
+          aria-label="Flying from"
+        />
+        <label for="flying-to" class="flying-to-label">Flying to</label>
+        <input
+          type="text"
+          id="flying-to"
+          class="flying-to-input"
+          placeholder="Paris"
+          aria-label="Flying to"
+        />
+        <label for="from-date" class="from-date-label">From Date</label>
+        <input
+          type="date"
+          id="from-date"
+          class="from-date-input"
+          placeholder="2023-11-24"
+          aria-label="From Date"
+        />
+        <label for="to-date" class="to-date-label">To Date</label>
+        <input
+          type="date"
+          id="to-date"
+          class="to-date-input"
+          placeholder="2024-12-05"
+          aria-label="To Date"
+        />
+        <label for="budget" class="budget-label">Budget in €</label>
+        <input
+          type="text"
+          id="budget"
+          class="budget-input"
+          placeholder="3000"
+          aria-label="Budget"
+        />
+
+        <button class="plan-trip-button">Plan my Trip!</button>
+      </section>
+    </section>
+    <div class="loading-overlay">
+      <img src="images/loading.gif" alt="Loading..." class="loading-gif" />
+    </div>
+    <section class="trip-container">
+      <h1 class="trip-title">Your Trip</h1>
+      <section class="trip-dates">
+        <time class="trip-start-date">→ 25th Nov 23</time>
+        <time class="trip-end-date">5th Dec 23 ←</time>
+      </section>
+      <p class="trip-route">New York City → Paris</p>
+
+      <section>
+        <h2 class="weather-title">Weather</h2>
+        <p class="weather-description">
+          You can expect the weather to be quite mild. Low will be 19° and high
+          will be 25°
+        </p>
+      </section>
+
+      <section>
+        <h2 class="flights-title">Flights</h2>
+        <div class="flights-info">
+          <p class="flights-description">
+            The best option for you is with Delta Airlines with a layover in
+            Oslo, departing at 16:00 from New york JFK and arriving at Paris
+            Charles de Gaulle Airport at 12:00 the next day
+          </p>
+          <button class="book-button">Book</button>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="hotel-title">Hotel</h2>
+        <div class="hotel-info">
+          <p class="hotel-description">
+            We recommend you stay at the Premiere Inn hotel in central Paris
+          </p>
+          <button class="book-button">Book</button>
+        </div>
+      </section>
+    </section>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
