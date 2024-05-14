@@ -1,14 +1,14 @@
-import { WEATHER_API_KEY } from "./config.js";
+import { WEATHER_API_KEY, DOMAIN_NAME_URL } from "./config.js";
 
 export async function getCurrentWeather({ cityName }) {
   const geoRes = await fetch(
-    `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&appid=${WEATHER_API_KEY}`
+    `http://${DOMAIN_NAME_URL}/geo/1.0/direct?q=${cityName}&appid=${WEATHER_API_KEY}`
   );
   const resJson = await geoRes.json();
   const { lat, lon } = resJson[0];
 
   const weatherRes = await fetch(
-    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${WEATHER_API_KEY}`
+    `https://${DOMAIN_NAME_URL}/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${WEATHER_API_KEY}`
   );
   const weatherJson = await weatherRes.json();
   const {

@@ -9,8 +9,7 @@ import {
   hideTripPlanner,
   showTripPlanner,
   tripPlannerButton,
-  travelersIncrement,
-  travelersDecrement,
+  travellersInput,
   travelersIncrementFunc,
   travelersDecrementFunc,
   flightBookButton,
@@ -38,12 +37,12 @@ tripPlannerButton.addEventListener("click", async function (event) {
   hideLoadingOverlay();
 });
 
-travelersIncrement.addEventListener("click", function (event) {
-  travelersIncrementFunc();
-});
-
-travelersDecrement.addEventListener("click", function (event) {
-  travelersDecrementFunc();
+travellersInput.addEventListener("click", function (event) {
+  //refactored with event delegation
+  const btn = event.target.closest(".btn__inline");
+  if (!btn) return;
+  if (btn.classList.value.includes("increment")) travelersIncrementFunc();
+  else travelersDecrementFunc();
 });
 
 flightBookButton.addEventListener("click", function (event) {

@@ -1,6 +1,7 @@
 import { userTripInput, extractedJsonResponse } from ".";
 import { agentChatMessages } from "./agent";
 import { extractJson, formatDate, capitalizeCityNames } from "./utils";
+import { MAX_PAX_NUM, MIN_PAX_NUM } from "./config";
 
 const letsBeginContainer = document.querySelector(".lets-begin-container");
 const tripPlanner = document.querySelector(".trip-planner");
@@ -10,12 +11,7 @@ export const letsBeginButton = document.querySelector(".lets-begin-button");
 
 //Trip Planner
 export const tripPlannerButton = document.querySelector(".plan-trip-button");
-export const travelersIncrement = document.querySelector(
-  ".travellers-increment"
-);
-export const travelersDecrement = document.querySelector(
-  ".travellers-decrement"
-);
+export const travellersInput = document.querySelector(".travellers-input");
 const travellersCount = document.querySelector(".travellers-count");
 const flyingFromInput = document.querySelector(".flying-from-input");
 const flyingToInput = document.querySelector(".flying-to-input");
@@ -56,14 +52,14 @@ export function showTripPlanner() {
 
 export function travelersIncrementFunc() {
   let count = Number(travellersCount.textContent);
-  if (count < 10) {
+  if (count < MAX_PAX_NUM) {
     count++;
     travellersCount.textContent = count;
   }
 }
 export function travelersDecrementFunc() {
   let count = Number(travellersCount.textContent);
-  if (count > 1) {
+  if (count > MIN_PAX_NUM) {
     count--;
     travellersCount.textContent = count;
   }
